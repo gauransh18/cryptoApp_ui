@@ -97,7 +97,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 ]),
               ],
             ),
-      
+
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 10, 0, 0),
               child: Container(
@@ -111,7 +111,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 ),
               ),
             ),
-      
+
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 5, 0, 0),
               child: Container(
@@ -125,7 +125,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 ),
               ),
             ),
-      
+
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -242,28 +242,134 @@ class _ScreenOneState extends State<ScreenOne> {
                 ],
               ),
             ),
-      
+
             Padding(
-                padding: EdgeInsets.fromLTRB(20, 18, 20,0),
-                child: Container(
-                  height: 200,
-                  width: 400,
-      
-                  decoration: BoxDecoration(
-                    color: bg_white,
-                    shape: BoxShape.rectangle,
-                    border: Border.all(
-                              color: Colors.black,
-                              width: 2,
-                    
+              padding: EdgeInsets.fromLTRB(20, 18, 20, 0),
+              child: Container(
+                height: 150,
+                width: 400,
+                decoration: BoxDecoration(
+                  color: bg_white,
+                  shape: BoxShape.rectangle,
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
                 ),
-                borderRadius: BorderRadius.circular(12.0),
-                ),),),
-           // Spacer(),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(14.0, 20, 0, 10),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              'My Balance',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal,
+                                color: txt_grey,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 14.0),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "\$ ${balance}",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: txt_black,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 14),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                // Perform button action
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.amber[
+                                    600], // Set the button color to amber
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                              ),
+                              child: Container(
+                                width: 150,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  'Refresh Balance',
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(25, 14, 0, 14),
+                      child: Container(
+                        width: 120,
+                        height: 150,
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            // width: 250,
+                            //   height: 100,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.5),
+                                  offset: Offset(4, 4),
+                                  //   blurRadius: 4,
+                                ),
+                              ],
+                              color: bg_white,
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(0),
+                                child: Icon(
+                                 //Icons.monetization_on_outlined,
+                                 Icons.attach_money,
+                                  size: 90,
+                                  color: txt_black,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // Spacer(),
           ],
         ),
       ),
     );
   }
 }
-
