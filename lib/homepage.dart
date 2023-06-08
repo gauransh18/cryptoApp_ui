@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 50.0),
                   child: Container(
-                    child: Text('THE BEST\nPLATFORM\nCRYPTO',
+                    child: Text('THE BEST\nPLATFORM\nFOR\nCRYPTO',
                         textAlign: TextAlign.center,
                         style:
                         //  TextStyle(
@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
                   child: SizedBox(
                     height: 100,
                     child: AnimatedTextKit(
+                      totalRepeatCount: 1,
                       animatedTexts: [
                         TyperAnimatedText(
                             'Our crptocurrency selling service allows you to easily and securely buy and sell a variety of digital currencies. Anytime and anywhere',

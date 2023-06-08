@@ -97,7 +97,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 ]),
               ],
             ),
-
+            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 10, 0, 0),
               child: Container(
@@ -322,43 +322,28 @@ class _ScreenOneState extends State<ScreenOne> {
                         ),
                       ],
                     ),
+                    Spacer(),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(25, 14, 0, 14),
+                      padding: EdgeInsets.all(16),
                       child: Container(
-                        width: 120,
-                        height: 150,
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            // width: 250,
-                            //   height: 100,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 2,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.5),
-                                  offset: Offset(4, 4),
-                                  //   blurRadius: 4,
-                                ),
-                              ],
-                              color: bg_white,
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: bg_white,
+                          shape: BoxShape.circle,
+                          border: Border.all(color: txt_black, width: 2.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.5),
+                              offset: Offset(4, 4),
                             ),
-                            child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(0),
-                                child: Icon(
-                                 //Icons.monetization_on_outlined,
-                                 Icons.attach_money,
-                                  size: 90,
-                                  color: txt_black,
-                                ),
-                              ),
-                            ),
-                          ),
+                          ],
+                        ),
+                        child: IconButton(
+                          icon: Icon(Icons.money),
+                          onPressed: () {
+                            // Perform card action
+                          },
                         ),
                       ),
                     ),
@@ -366,7 +351,122 @@ class _ScreenOneState extends State<ScreenOne> {
                 ),
               ),
             ),
-            // Spacer(),
+
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
+              child: Container(
+                height: 150,
+                width: 400,
+                decoration: BoxDecoration(
+                  color: bg_white,
+                  shape: BoxShape.rectangle,
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'My Card',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal,
+                              color: txt_grey,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Card Details',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: txt_black,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Card Number: **** **** **** 1234',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: txt_black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Container(
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: bg_white,
+                          shape: BoxShape.circle,
+                          border: Border.all(color: txt_black, width: 2.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.5),
+                              offset: Offset(4, 4),
+                            ),
+                          ],
+                        ),
+                        child: IconButton(
+                          icon: Icon(Icons.credit_card),
+                          onPressed: () {
+                            // Perform card action
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                height: 80,
+                width: double.infinity,
+                color: Colors.blue,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.local_offer,
+                        color: bg_white,
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          'Limited Time Offer: Get 5\$ cash back on your first Purchase!',
+                          style: GoogleFonts.varelaRound(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: bg_white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
