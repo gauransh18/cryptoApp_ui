@@ -1,4 +1,4 @@
-import 'package:crypto_ui/screenOne.dart';
+import '../assets/screenOne.dart';
 import 'package:flutter/material.dart';
 
 import 'homepage.dart';
