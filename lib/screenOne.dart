@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../lib/contants.dart';
+import 'contants.dart';
 
 class ScreenOne extends StatefulWidget {
   const ScreenOne({super.key});

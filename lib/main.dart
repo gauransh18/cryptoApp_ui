@@ -1,7 +1,7 @@
-import '../assets/screenOne.dart';
 import 'package:flutter/material.dart';
 
 import 'homepage.dart';
+import 'screenOne.dart';
 import 'routes.dart';
 
 void main() {
