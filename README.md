@@ -7,4 +7,4 @@ reference: https://dribbble.com/shots/21669246-Crypto-Mobile-IOS-App
 Screenshots:
 ![Alt text](/assets/start.png?raw=true 'Screen One')
 
-![Alt text](/assets/screenOne.png?raw=true 'Screen Two')
+![Alt text](/assets/screenONE.png?raw=true 'Screen Two')
