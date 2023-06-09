@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:crypto_ui/contants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'routes.dart';
 import 'contants.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -54,17 +54,31 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-              ),
+              ).animate().slideX(
+                  duration: Duration(milliseconds: 500), begin: -1, end: 0),
               // Description Section
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
                   child: SizedBox(
-                    height: 100,
+                    height: 140,
                     child: AnimatedTextKit(
                       totalRepeatCount: 1,
+                      pause: Duration(milliseconds: 1000),
                       animatedTexts: [
+                        WavyAnimatedText(
+                          '',
+                          textAlign: TextAlign.center,
+                          textStyle: GoogleFonts.gruppo(
+                            textStyle: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 21,
+                              fontWeight: FontWeight.normal,
+                              fontStyle: FontStyle.normal,
+                            ),
+                          ),
+                        ),
                         TyperAnimatedText(
                           startText,
                           textAlign: TextAlign.center,
@@ -81,8 +95,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-              ),
+              ).animate().slideX(
+                  duration: Duration(milliseconds: 500),
+                  begin: -1,
+                  end: 0,
+                  delay: Duration(milliseconds: 500)),
               // Button Section
+              
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Container(
@@ -129,7 +148,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-              ),
+              ).animate().slideX(
+                  duration: Duration(milliseconds: 500),
+                  begin: -2,
+                  end: 0,
+                  delay: Duration(milliseconds: 1000)),
             ],
           ),
         ),

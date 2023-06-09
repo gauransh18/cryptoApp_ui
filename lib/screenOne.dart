@@ -15,7 +15,8 @@ class _ScreenOneState extends State<ScreenOne> {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: bg_blue,
+          //backgroundColor: bg_blue,
+          backgroundColor: Color(0xFFC9EAFC),
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
